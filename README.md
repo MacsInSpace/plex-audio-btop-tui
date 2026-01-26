@@ -15,7 +15,7 @@ A terminal user interface for Plex audio playback with real-time waveform visual
 - Configurable options menu
 - Optimized for large libraries (98k+ tracks)
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/Asb8nfn" data-context="false" ><a href="//imgur.com/a/Asb8nfn"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>  
+![Alt text](http://imgur.com/a/Asb8nfn "Imgr")
 
 ## Quick Start
 
