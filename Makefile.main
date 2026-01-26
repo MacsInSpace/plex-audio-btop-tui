@@ -1,0 +1,32 @@
+# Makefile for Plex TUI
+
+CXX = g++
+CXXFLAGS = -std=c++17 -Wall -Wextra -O2 -pthread
+LDFLAGS = -lcurl -pthread
+
+TARGET = bin/plex-tui
+BUILD_DIR = build
+SOURCES = main.cpp terminal.cpp input.cpp plex_client.cpp audio_decoder.cpp player_view.cpp waveform.cpp config.cpp plex_xml.cpp
+OBJECTS = $(SOURCES:%.cpp=$(BUILD_DIR)/%.o)
+
+.PHONY: all clean run test directories
+
+all: directories $(TARGET)
+
+directories:
+	@mkdir -p $(BUILD_DIR) bin
+
+$(TARGET): $(OBJECTS)
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+
+$(BUILD_DIR)/%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+clean:
+	rm -rf $(BUILD_DIR) bin
+
+run: $(TARGET)
+	./$(TARGET)
+
+test: $(TARGET)
+	./$(TARGET) --server http://localhost:32400 --token YOUR_TOKEN_HERE

@@ -1,0 +1,77 @@
+# Build artifacts
+build/
+*.o
+*.a
+*.so
+*.dylib
+
+# Executables (except pre-built macOS ARM64 in bin/)
+# Ignore executables in root, but allow bin/plex-tui
+/plex-tui
+/plex_waveform
+!bin/plex-tui
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Debug/log files
+debug.log
+*.log
+*.log.*
+
+# Config files (user-specific - contains tokens and personal settings)
+# Allow config.example.ini but ignore user's actual config.ini
+config.ini
+*.ini
+!config.example.ini
+
+# Legacy folder (contains old code and potentially sensitive data)
+legacy/
+
+# Documentation folder (keep local only)
+docs/
+
+# Backup directories (may contain sensitive data)
+.backups/
+backups/
+
+# CMake (if used)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.*.swp
+
+# Editor backup files
+*.bak
+*.backup
+*~
+
+# Python cache (if any Python scripts remain)
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Test files that might contain sensitive data
+test_*.sh
+*_test.sh
