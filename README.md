@@ -17,9 +17,9 @@ A terminal user interface for Plex audio playback with real-time waveform visual
 
 ## Screenshots
 
-![Player View](Screenshot 2026-01-26 at 1.08.56 pm.png)
+![Player View](assets/player-view.png)
 
-![Library View](Screenshot 2026-01-26 at 1.15.43 pm.png)
+![Library View](assets/library-view.png)
 
 ## Quick Start
 
