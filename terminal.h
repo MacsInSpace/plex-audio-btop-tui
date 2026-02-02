@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <cstdint>
 #include <termios.h>
 #include <sys/ioctl.h>
 
